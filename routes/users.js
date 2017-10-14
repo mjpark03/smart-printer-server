@@ -13,9 +13,16 @@ var T = new Twit({
 router.get('/tweet/friends', function(req, res, next) {
   T.get('followers/list', { screen_name: 'tolga_tezel' },
     function (err, data, response) {
-      console.log(data);
       res.status(200).send(data);
     });
+});
+
+router.post('/tweet/upload', function(req, res, next) {
+  var message = 'Hi, there';
+  T.post('statuses/update', { status: message },
+    function(err, data, response) {
+      res.status(200).send(data);
+    })
 });
 
 module.exports = router;
