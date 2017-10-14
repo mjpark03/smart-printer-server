@@ -10,4 +10,12 @@ var T = new Twit({
   timeout_ms:           60*1000  // optional HTTP request timeout to apply to all requests.
 });
 
+router.get('/tweet/friends', function(req, res, next) {
+  T.get('followers/list', { screen_name: 'tolga_tezel' },
+    function (err, data, response) {
+      console.log(data);
+      res.status(200).send(data);
+    });
+});
+
 module.exports = router;
