@@ -3,10 +3,10 @@ var router = express.Router();
 
 var Twit = require('twit');
 var T = new Twit({
-  consumer_key:         'nyiopp8B7ny8Qvk6oCc5US269',
-  consumer_secret:      'nyGJLiN3pdcHXeZsdfjIDto7byFl7NW8jS0eOFWFvkumGXRgcj',
-  access_token:         '171313967-PqQoXaY2mFofm8FsGD1vVbYPr8wsaBoRkUVOWTZp',
-  access_token_secret:  'w5icoyhVRhisUxn1xcNdoW3ZImzOPXUVtCuaxI1ee9caV',
+  consumer_key:         'your consumer key',
+  consumer_secret:      'your consumer secret',
+  access_token:         'your access token',
+  access_token_secret:  'your access token secret',
   timeout_ms:           60*1000  // optional HTTP request timeout to apply to all requests.
 });
 
